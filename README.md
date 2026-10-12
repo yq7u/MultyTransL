@@ -1,2 +1,1 @@
-
-Translate
+sorry for ugly
