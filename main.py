@@ -4,20 +4,7 @@ from tkinter import Text
 
 num = 1
 
-def addlang():
-    global num
-    num += 1
-    print("hi")
-    print(num)
 
-def remlang():
-    global num
-    if num <= 1:
-        print("Cant be negative")
-    else:
-        num -= 1
-        print("bye")
-        print(num)
 
 root = tk.Tk()
 root.title("MultyTransL")
@@ -64,6 +51,31 @@ add.grid(row=2+num, column=1, pady=0, padx=0)
 rem = tk.Button(right, text="Remove", command=lambda:remlang())
 rem.grid(row=3+num, column=1, pady=10, padx=0)
 
+
+def test1():
+    rem = tk.Button(right, text="Remove", command=lambda: remlang())
+    rem.grid(row=3 + num, column=1, pady=20, padx=0)
+
+    dropdown2 = tk.OptionMenu(cent, select1, *languages)
+    dropdown2.grid(row=1+num, column=1, pady=50, padx=0)
+
+
+def addlang():
+    global num
+    num += 1
+    print("hi")
+    print(num)
+    test1()
+
+
+def remlang():
+    global num
+    if num <= 1:
+        print("Cant be negative")
+    else:
+        num -= 1
+        print("bye")
+        print(num)
 
 root.minsize(450, 300)
 root.mainloop()
