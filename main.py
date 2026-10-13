@@ -5,14 +5,20 @@ from tkinter import Text
 num = 1
 
 def addlang():
-    num+1
+    global num
+    num += 1
     print("hi")
     print(num)
 
 def remlang():
-    num -1
-    print("bye")
-    print(num)
+    global num
+    if num <= 1:
+        print("Cant be negative")
+    else:
+        num -= 1
+        print("bye")
+        print(num)
+
 root = tk.Tk()
 root.title("MultyTransL")
 root.geometry("950x800")
